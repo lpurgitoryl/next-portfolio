@@ -30,7 +30,7 @@
     <img src="./vanillaPrototype/CC_Logo.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Syncify</h3>
+<h3 align="center">Portfolio</h3>
 
   <p align="center">
       TO BE ADDED
