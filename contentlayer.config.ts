@@ -8,7 +8,8 @@ export const Project = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     date: { type: 'date', required: true },
     repo: { type: 'string', required: true},
-    demo: { type: 'date', required: false}
+    demo: { type: 'date', required: false},
+    toolbox: { type: 'list', of: { type: 'string' }, required: false}
   },
   computedFields: {
     url: { type: 'string', resolve: (project) => `/projects/${project.repo}` },

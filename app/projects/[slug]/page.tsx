@@ -1,4 +1,5 @@
 import NavBar from "@/app/components/NavBar";
+import ProjectToolBox from "@/app/components/ProjectToolBox";
 
 import { format, parseISO } from "date-fns";
 import { allProjects } from "contentlayer/generated";
@@ -29,11 +30,12 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
             className="pt-12 text-xl md:w-4/5"
             dangerouslySetInnerHTML={{ __html: project.body.html }}
           ></h1>
-          <p
-            className="pt-12 text-xl md:w-4/5"
-            dangerouslySetInnerHTML={{ __html: project.body.html }}
-          ></p>
         </article>
+        {project.toolbox === undefined ? (
+          ""
+        ) : (
+          <ProjectToolBox toolbox={project.toolbox} />
+        )}
       </main>
     </>
   );

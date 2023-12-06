@@ -17,13 +17,6 @@ function Projects() {
       <p className="pt-12 text-xl md:w-4/5">{user_info.about_description}</p>
 
       <div className="grid md:grid-cols-2 items-center gap-20 my-12">
-        {/* {user_info.repos.map((repo) => (
-          <ProjectCard
-            key={repo.repo_name}
-            repo_name={repo.repo_name}
-            username={user_info.github_username}
-          />
-        ))} */}
         {projects.map((project, idx) => (
           <ProjectCard
             key={idx}

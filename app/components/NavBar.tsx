@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import * as Toggle from "@radix-ui/react-toggle";
+import Link from "next/link";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import favicon from "../favicon.ico";
@@ -29,13 +30,15 @@ function NavBar() {
 
   return (
     <nav className="bg-inherit bg-opacity-50 flex w-full justify-between items-center pr-10 pl-10 pt-6 pb-6 shadow-sm dark:shadow-white/20">
-      <Image
-        src={favicon}
-        width={32}
-        height={32}
-        alt="Picture of the author"
-        className="rounded-full"
-      />
+      <Link href="/" className="cursor-pointe">
+        <Image
+          src={favicon}
+          width={32}
+          height={32}
+          alt="Picture of the author"
+          className="rounded-full cursor-pointer"
+        />
+      </Link>
       <Toggle.Root
         className="Toggle w-8 h-8 flex justify-center items-center bg-slate-300 rounded-lg"
         aria-label="Toggle italic"
