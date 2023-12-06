@@ -1,22 +1,7 @@
 {
     "github_username": "lpurgitoryl",
-    "tool_box": ["html5", "css3", "tailwindcss", "javascript", "typescript", "react", "nextjs", "python", "selenium","cplusplus" , "arduino", "raspberrypi", "git"],
-    "repos" : [
-        {
-            "repo_name": "commutercalc",
-            "blog_md_file": "" 
-        },{
-            "repo_name": "Syncify",
-            "blog_md_file": "" 
-        },{
-            "repo_name": "FRDM-K64F-CurtainOpener",
-            "blog_md_file": "" 
-        },{
-            "repo_name": "rc-car",
-            "blog_md_file": "" 
-        },{
-            "repo_name": "browser-boy",
-            "blog_md_file": "" 
-        }
-    ]
+    "name": "I'm Nicole G.",
+    "hero_description": "Enthusiast of all things IoT and the web",
+    "about_description": "Take a look at some of my favorite projects. These cover different categories from IOT, embedded systems, computer vision and more.",
+    "tool_box": ["html5", "css3", "tailwindcss", "javascript", "typescript", "react", "nextjs", "python", "selenium","cplusplus" , "arduino", "raspberrypi", "git"]
 }

@@ -1,6 +1,6 @@
 ---
 title:  frdm-k64f-curtainopener
-date: 02-24-2000
+date: 03-02-2000
 repo: frdm-k64f-curtainopener
 
 ---
