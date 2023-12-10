@@ -2,6 +2,8 @@ import NavBar from "@/app/components/NavBar";
 import ProjectToolBox from "@/app/components/ProjectToolBox";
 import Footer from "@/app/components/Footer";
 
+import Test from "@/app/components/Test";
+
 import { format, parseISO } from "date-fns";
 import { allProjects } from "contentlayer/generated";
 
@@ -21,6 +23,7 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <main className="min-h-screen bg-white dark:bg-black">
+        <Test />
         <NavBar />
         <article className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
           <h1 className="text-7xl md:text-9xl">{project.title}</h1>
@@ -37,7 +40,7 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
         ) : (
           <ProjectToolBox toolbox={project.toolbox} />
         )}
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
