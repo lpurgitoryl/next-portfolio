@@ -1,4 +1,5 @@
 "use client";
+// inspired by https://www.hover.dev/components/navigation
 
 import { useState, useEffect } from "react";
 import {

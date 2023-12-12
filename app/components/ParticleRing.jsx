@@ -1,4 +1,5 @@
 "use client";
+// tysm @ https://www.hover.dev/components/three-d
 
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
