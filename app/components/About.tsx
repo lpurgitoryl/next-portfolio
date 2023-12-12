@@ -1,6 +1,9 @@
 function About() {
   return (
-    <section className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
+    <section
+      className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white"
+      id="about"
+    >
       <h1 className="text-7xl md:text-9xl">About Me</h1>
       <p className="my-12 text-xl md:w-4/5">
         I recently graduated from the University of California, Riverside with a

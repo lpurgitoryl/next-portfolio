@@ -4,7 +4,7 @@ import "../scroll.css";
 
 function Hero() {
   return (
-    <section className="h-screen">
+    <section className="h-screen" id="hero">
       <ParticleRing />
       <div className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
         <h1 className="text-7xl md:text-9xl">Hey!</h1>
