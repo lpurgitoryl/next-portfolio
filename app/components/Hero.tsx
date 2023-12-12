@@ -14,9 +14,6 @@ function Hero() {
         </h1>
       </div>
       <div className="flex justify-end text-blue-500">
-        {/* <button className="absolute text-xl md:text-2xl left-14 my-4 bg-blue-500 text-white rounded px-4 py-1">
-            Resume
-          </button> */}
         <div id="scroll-wrapper" />
         <div id="scroll-wrapper-inner">
           <div id="scroll-title">Scroll</div>

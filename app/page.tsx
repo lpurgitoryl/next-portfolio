@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import ToolBox from "./components/ToolBox";
 import SideNav from "./components/SideNav";
+import Resume from "./components/Resume";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <ToolBox />
       <Projects />
+      <Resume />
       <Footer />
     </main>
   );
