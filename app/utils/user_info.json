@@ -2,6 +2,8 @@
     "github_username": "lpurgitoryl",
     "name": "I'm Nicole G.",
     "hero_description": "Enthusiast of all things IoT and the web",
-    "about_description": "Take a look at some of my favorite projects. These cover different categories from IOT, embedded systems, computer vision and more.",
+    "about_description": 
+    "I recently graduated from the University of California, Riverside with a bachelor's in computer engineering. During my undergraduate education I spent a lot of my time researching and implementing new technologies as an Instructional Design Student Asssistant and a California Learning Lab Research Assistant. I like to think of myself of a maker and tinkerer. My projects cover diffrent aspects in tech that interest me. Scroll a bit more to see some of my work!",
+    "project_description" : "Take a look at some of my favorite projects. These cover different categories from IOT, embedded systems, computer vision and more.",
     "tool_box": ["html5", "css3", "tailwindcss", "javascript", "typescript", "react", "nextjs", "python", "selenium","cplusplus" , "arduino", "raspberrypi", "git"]
 }
