@@ -18,13 +18,13 @@ function About() {
         my resume for more about me and scroll a bit more to see some of my
         work!
       </p>
-      <Link
-        href="#resume"
-        className="scroll-smooth flex flex-row justify-center items-center cursor-pointer bg-blue-500 my-12 py-4 px-6 rounded-full"
-      >
-        <DownloadIcon height={32} width={32} color="white" />
-        <p className="text-xl text-white md:w-4/5">View Resume</p>
-      </Link>
+      {/* <iframe
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzXUnXKUmOSB?utm_source=generator&theme=0"
+        width="100%"
+        height="152"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe> */}
     </section>
   );
 }
