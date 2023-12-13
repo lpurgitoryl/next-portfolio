@@ -14,9 +14,8 @@ function About() {
         spent a lot of my time researching and implementing new technologies as
         an Instructional Design Student Asssistant and a California Learning Lab
         Research Assistant. I like to think of myself of a maker and tinkerer.
-        My projects cover diffrent aspects in tech that interest me. Check out
-        my resume for more about me and scroll a bit more to see some of my
-        work!
+        My projects cover diffrent aspects in tech that interest me. Scroll a
+        bit more to see some of my work!
       </p>
       {/* <iframe
         src="https://open.spotify.com/embed/playlist/37i9dQZF1EpzXUnXKUmOSB?utm_source=generator&theme=0"

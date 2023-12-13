@@ -117,13 +117,13 @@ const SideNav = () => {
       >
         <CodeIcon color="white" />
       </NavItem>
-      <NavItem
+      {/* <NavItem
         href="#resume"
         isSelected={selected === 3}
         onClick={() => handleNavItemClick(3)}
       >
         <FileIcon color="white" />
-      </NavItem>
+      </NavItem> */}
       <NavItem
         href="#contact"
         isSelected={selected === 4}

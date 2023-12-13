@@ -4,6 +4,7 @@ import {
   GitHubLogoIcon,
   EnvelopeClosedIcon,
   ChatBubbleIcon,
+  DownloadIcon,
 } from "@radix-ui/react-icons";
 
 interface ContactProps {
@@ -24,12 +25,24 @@ const ContactItem = ({ children, href }: ContactProps) => {
 function Contact() {
   return (
     <section
-      className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white"
+      className="h-full flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white"
       id="contact"
     >
       <h1 className="text-7xl md:text-9xl">Contact</h1>
-      <div className="flex my-10">
-        <div className="border-r-2 border-black">
+      <p className="my-12 text-xl md:w-4/5">
+        Check out my resume for more about me and feel free to connect using any
+        method below!
+      </p>
+      <Link
+        href="/GarciaNicoleResumeSoftware.pdf"
+        target="_blank"
+        className="flex flex-row justify-center items-center cursor-pointer bg-blue-500 py-4 px-6 rounded-full"
+      >
+        <DownloadIcon height={32} width={32} color="white" />
+        <p className="text-xl text-white md:w-4/5">View Resume</p>
+      </Link>
+      <div className="flex my-14">
+        <div className="border-r-2 border-black dark:border-white">
           <div className="flex flex-col justify-between h-full mx-4">
             <p className="text-xl my-4">socials</p>
             <p className="text-xl my-4">message</p>
@@ -54,8 +67,6 @@ function Contact() {
           </div>
         </div>
       </div>
-
-      <p className="my-12 text-xl md:w-4/5"></p>
     </section>
   );
 }
