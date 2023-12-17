@@ -40,7 +40,7 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
         ) : (
           <ProjectToolBox toolbox={project.toolbox} />
         )}
-        <ProjectLinks />
+        <ProjectLinks repo={project.repo} demo={project.demo} />
         <Footer />
       </main>
     </>

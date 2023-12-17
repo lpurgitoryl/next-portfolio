@@ -8,7 +8,7 @@ export const Project = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     date: { type: 'date', required: true },
     repo: { type: 'string', required: true},
-    demo: { type: 'date', required: false},
+    demo: { type: 'string', required: false},
     toolbox: { type: 'list', of: { type: 'string' }, required: false}
   },
   computedFields: {

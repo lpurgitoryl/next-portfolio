@@ -2,6 +2,7 @@
 title:  browser-boy
 date: 02-24-2000
 repo: browser-boy
+demo: https://browser-boy.vercel.app/
 toolbox:
     - html5
     - css3
