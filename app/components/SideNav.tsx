@@ -29,7 +29,7 @@ const NavItem = ({ children, href, isSelected, onClick }: NavItemProps) => {
     <div className="w-14 h-8 flex items-center justify-center my-4">
       <Link href={href}>
         <motion.button
-          className="p-3 text-xl bg-slate-300 dark:bg-slate-900 rounded-md transition-colors relative"
+          className="p-3 text-xl bg-slate-300 dark:bg-slate-900 rounded-md relative"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={onClick}
@@ -39,7 +39,7 @@ const NavItem = ({ children, href, isSelected, onClick }: NavItemProps) => {
             {isSelected && (
               <motion.span
                 key="highlight"
-                className="absolute inset-0 rounded-md bg-blue-500 z-0"
+                className="absolute inset-0 rounded-md bg-accent-500 z-0"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0 }}

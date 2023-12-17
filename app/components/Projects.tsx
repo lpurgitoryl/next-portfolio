@@ -7,7 +7,7 @@ import { Project, allProjects } from "contentlayer/generated";
 
 function Projects() {
   const projects = allProjects.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
+    compareDesc(new Date(a.date), new Date(b.date)),
   );
 
   return (

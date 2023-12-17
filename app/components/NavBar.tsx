@@ -30,7 +30,7 @@ function NavBar() {
 
   return (
     <nav className="bg-inherit bg-opacity-50 flex w-full justify-between items-center pr-10 pl-10 pt-6 pb-6 shadow-sm dark:shadow-white/20">
-      <Link href="/" className="cursor-pointe">
+      <Link href="/" className="cursor-pointer">
         <Image
           src={favicon}
           width={32}

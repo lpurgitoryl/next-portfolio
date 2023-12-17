@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Icon({ icon }: { icon: string }) {
   return (
-    <span className="inline-flex flex-col items-center hover:scale-110 hover:transition-all hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-blue-500 hover:text-blue-500 rounded-xl">
+    <span className="inline-flex flex-col items-center hover:scale-110 hover:transition-all hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl">
       <Image
         src={
           icon === "tailwindcss"

@@ -1,4 +1,7 @@
 import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
+// const colors = require('tailwindcss/colors')
+
 
 const config: Config = {
   content: [
@@ -7,6 +10,13 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   plugins: [],
-  darkMode: ["class"]
+  darkMode: ["class"],
+  theme: {
+    extend: {
+      colors:{
+        accent: colors.red
+      }
+    }
+  }
 }
 export default config

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply transition-colors duration-100;
+}
+
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;

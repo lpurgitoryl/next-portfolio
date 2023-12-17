@@ -68,7 +68,7 @@ function ProjectCard(props: repoInfo) {
   }, []);
 
   return (
-    <div className="shadow-lg rounded-2xl border dark:shadow-white/50 px-8 py-8 hover:scale-[101%] hover:transition-all hover:border-blue-500">
+    <div className="shadow-lg rounded-2xl border dark:shadow-white/50 px-8 py-8 hover:scale-[101%] hover:transition-all hover:border-accent-500">
       <h1 className="text-xl font-semibold">{props.repo_name}</h1>
       <p className="">{description}</p>
       <div className="w-full flex justify-center my-2">
