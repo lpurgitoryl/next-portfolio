@@ -1,6 +1,6 @@
-import Icon from "./Icon";
+import Icon from "@/app/components/Icon";
 
-function ProjectToolBox({ toolbox }: { toolbox: string[] | undefined }) {
+function ProjectToolBox({ toolbox }: { toolbox: string[] }) {
   return (
     <section className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
       <h1 className="my-12 text-6xl">Tool Box</h1>

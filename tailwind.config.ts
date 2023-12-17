@@ -14,7 +14,7 @@ const config: Config = {
   theme: {
     extend: {
       colors:{
-        accent: colors.red
+        accent: colors.blue
       }
     }
   }

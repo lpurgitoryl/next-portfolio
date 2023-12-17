@@ -1,11 +1,11 @@
 import NavBar from "@/app/components/NavBar";
-import ProjectToolBox from "@/app/components/ProjectToolBox";
+import ProjectToolBox from "./components/ProjectToolBox";
 import Footer from "@/app/components/Footer";
-
-// import Test from "@/app/components/SideBarNav";
 
 import { format, parseISO } from "date-fns";
 import { allProjects } from "contentlayer/generated";
+
+import ProjectLinks from "./components/ProjectLinks";
 
 export const generateStaticParams = async () =>
   allProjects.map((project) => ({ slug: project.repo }));
@@ -40,7 +40,8 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
         ) : (
           <ProjectToolBox toolbox={project.toolbox} />
         )}
-        {/* <Footer /> */}
+        <ProjectLinks />
+        <Footer />
       </main>
     </>
   );
