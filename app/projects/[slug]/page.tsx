@@ -1,7 +1,7 @@
 import NavBar from "@/app/components/NavBar";
 import ProjectToolBox from "./components/ProjectToolBox";
 import Footer from "@/app/components/Footer";
-import SideNav from "./components/SideNav";
+import ProjectSideNav from "./components/ProjectSideNav";
 import { format, parseISO } from "date-fns";
 import { allProjects } from "contentlayer/generated";
 import { useState } from "react";
@@ -39,7 +39,7 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
   return (
     <>
       <main className="min-h-screen bg-white dark:bg-black">
-        <SideNav prev={"/projects/" + prev} next={"/projects/" + next} />
+        <ProjectSideNav prev={"/projects/" + prev} next={"/projects/" + next} />
         <NavBar />
         <article className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
           <h1 className="text-7xl md:text-9xl">{project.title}</h1>
@@ -51,11 +51,7 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
             dangerouslySetInnerHTML={{ __html: project.body.html }}
           ></h1>
         </article>
-        {project.toolbox === undefined ? (
-          ""
-        ) : (
-          <ProjectToolBox toolbox={project.toolbox} />
-        )}
+        {project.toolbox && <ProjectToolBox toolbox={project.toolbox} />}
         <ProjectLinks repo={project.repo} demo={project.demo} />
         <Footer />
       </main>

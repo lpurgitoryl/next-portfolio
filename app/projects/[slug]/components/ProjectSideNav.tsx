@@ -50,7 +50,7 @@ interface SideNavProps {
   next: string;
 }
 
-const SideNav = ({ prev, next }: SideNavProps) => {
+const ProjectSideNav = ({ prev, next }: SideNavProps) => {
   const [selected, setSelected] = useState(0);
   const controls = useAnimation();
 
@@ -98,4 +98,4 @@ const SideNav = ({ prev, next }: SideNavProps) => {
   );
 };
 
-export default SideNav;
+export default ProjectSideNav;

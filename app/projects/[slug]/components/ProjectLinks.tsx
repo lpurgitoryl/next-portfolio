@@ -20,9 +20,7 @@ function ProjectLinks({ repo, demo }: projectLinks) {
         >
           <p className="text-xl text-white">Source Code</p>
         </Link>
-        {demo === undefined ? (
-          ""
-        ) : (
+        {demo && (
           <Link
             href={String(demo)}
             target="_blank"
