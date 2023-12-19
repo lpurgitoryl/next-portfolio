@@ -8,8 +8,6 @@ interface projectLinks {
 
 function ProjectLinks({ repo, demo }: projectLinks) {
   const ghURL = "https://github.com/" + user_info.github_username + "/" + repo;
-  console.log(demo);
-  console.log(repo);
   return (
     <section className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
       <h1 className="my-12 text-6xl">See It In Action</h1>
