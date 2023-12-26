@@ -40,9 +40,12 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
       <main className="min-h-screen bg-white dark:bg-black">
         <ProjectSideNav prev={"/projects/" + prev} next={"/projects/" + next} />
         <NavBar />
-        <article className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
+        <article className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-all dark:text-white">
           <h1 className="text-7xl md:text-9xl">{project.title}</h1>
-          <time dateTime={project.date} className="mb-1 text-xs text-gray-600">
+          <time
+            dateTime={project.date}
+            className="mx-2 my-4 text-xs text-gray-600"
+          >
             {format(parseISO(project.date), "LLLL d, yyyy")}
           </time>
           <h1
