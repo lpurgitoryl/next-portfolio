@@ -26,11 +26,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/lpurgitoryl/commutercalc/">
+  <a href="https://github.com/lpurgitoryl/next-portfolio/">
     <img src="./vanillaPrototype/CC_Logo.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Portfolio</h3>
+<h3 align="center">Nextjs Portfolio</h3>
 
   <p align="center">
       TO BE ADDED
@@ -38,7 +38,7 @@
     <a href="https://github.com/lpurgitoryl/commutercalc"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://commutercalc.vercel.app/">View Demo</a>
+    <a href="https://nicolegarcia.vercel.app/">View Demo</a>
   </p>
 </div>
 
@@ -78,7 +78,6 @@ TO BE ADDED
 [![Vercel][Vercel]][Vercel-url]
 ![HTML]
 ![CSS]
-[![Prettier][Prettier]][Prettier-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,5 +144,3 @@ Nicole Garcia - <ngarc084@ucr.edu>
 [Prettier-url]: https://prettier.io/
 [HTML]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
-[Vite-url]: https://vitejs.dev/
