@@ -4,7 +4,6 @@ import Footer from "@/app/components/Footer";
 import ProjectSideNav from "./components/ProjectSideNav";
 import { format, parseISO } from "date-fns";
 import { allProjects } from "contentlayer/generated";
-import { useState } from "react";
 
 import ProjectLinks from "./components/ProjectLinks";
 
