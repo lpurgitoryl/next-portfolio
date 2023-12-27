@@ -35,7 +35,6 @@
   <p align="center">
       A simple customizable personal portfolio website using Nextjs and Contentlayer.
     <br />
-    <a href="https://github.com/lpurgitory/next-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://nicolegarcia.vercel.app/">View Demo</a>
