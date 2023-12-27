@@ -26,19 +26,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/lpurgitoryl/commutercalc/">
-    <img src="./vanillaPrototype/CC_Logo.svg" alt="Logo" width="80" height="80">
+  <a href="https://github.com/lpurgitoryl/next-portfolio/">
+    <img src="./public/nextjsportfolio.PNG" alt="Logo" height="300">
   </a>
 
-<h3 align="center">Portfolio</h3>
+<h3 align="center">Nextjs Portfolio</h3>
 
   <p align="center">
-      TO BE ADDED
+      A simple customizable personal portfolio website using Nextjs and Contentlayer.
     <br />
-    <a href="https://github.com/lpurgitoryl/commutercalc"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/lpurgitory/next-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://commutercalc.vercel.app/">View Demo</a>
+    <a href="https://nicolegarcia.vercel.app/">View Demo</a>
   </p>
 </div>
 
@@ -59,7 +59,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contact</a></li>
+    <!-- <li><a href="#contact">Contact</a></li> -->
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -67,25 +67,24 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://commutercalc.vercel.app/)
-
-TO BE ADDED
+After learning react, I wanted to update my personal site and decided to use nextjs! I also wanted to make this site easy to customize for other devs to use. I tried to make it easy to make project posts by connecting to the github api, using contentlayer for markdown parsing, and the built-in dynamic routing for navigation to each post. I hope you like it!  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-[![Vercel][Vercel]][Vercel-url]
+![Nextjs]
+![Threejs]
 ![HTML]
 ![CSS]
-[![Prettier][Prettier]][Prettier-url]
+![Tailwind]
+[![Vercel][Vercel]][Vercel-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-TO BE ADDED
 
 ### Prerequisites
 
@@ -102,7 +101,7 @@ Make sure you have npm installed with
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/lpurgitoryl/commutercalc.git
+   git clone https://github.com/lpurgitoryl/next-portfolio.git
    ```
 
 2. Install NPM packages
@@ -110,25 +109,76 @@ Make sure you have npm installed with
    ```sh
    npm install
    ```
+  
+3. Run dev server
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+   ```sh
+   npm run dev
+   ```
 
-<!-- CONTACT -->
-## Contact
+### Setup
 
-Nicole Garcia - <ngarc084@ucr.edu>
+I made this (hopefully) easy to adopt for personal use.
 
-<!-- Project Link: [https://commutercalc.vercel.app/](https://commutercalc.vercel.app/) -->
+1. Open the user_info.json file in any text editor
+
+   ```sh
+    app/utils/user_info.json
+   ```
+
+2. Edit the following feilds and then save
+
+   ```json
+   {"github_username": "...",
+    "name": "I'm ...",
+    "hero_description": "...",
+    "about_description": "...",
+    "project_description" : "...",
+    "tool_box": ["html5", "css3", "tailwindcss"],
+    "linkedin": "...full url here",
+    "email": "...",
+    "telephone": "0123456789"}
+    // fill tool_box with icon names from devicon.dev
+   ```
+
+3. add your own resume with the name of "resume" in the public folder
+
+   ```sh
+    resume.pdf
+   ```
+
+4. Create your own project posts
+
+   ```sh
+   cd projects/
+   touch newprojectname.md
+   ```
+
+5. Add content, save, and then deloy your site on Vercel!
+
+   ```
+   ---
+   title:  frdm-k64f-curtainopener
+   date: 06-02-2023
+   repo: frdm-k64f-curtainopener
+   toolbox:
+      - c
+   ---
+   This project is meant to simulate a single component in a smart home system....
+   ```
+
+### Accent Color
+
+If you want to change the accent color, edit the ```tailwind.config.ts``` line 17 to any other tailwind default color.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-<!-- * [Fuel Economy API](https://www.fueleconomy.gov/feg/ws/)
-* [Mapbox](https://www.mapbox.com/)
-* [AAA](https://gasprices.aaa.com/aaa-gas-cost-calculator/)
-* [GasBuddy](https://www.californiagasprices.com/TripCalculator.aspx) -->
+[Particle Ring](https://www.hover.dev/components/three-d) 
+
+[Side Bar Inspo](https://www.hover.dev/components/navigation)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,5 +195,6 @@ Nicole Garcia - <ngarc084@ucr.edu>
 [Prettier-url]: https://prettier.io/
 [HTML]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
-[Vite-url]: https://vitejs.dev/
+[Nextjs]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Threejs]: https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white
+[Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white 

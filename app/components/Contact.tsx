@@ -6,6 +6,7 @@ import {
   ChatBubbleIcon,
   DownloadIcon,
 } from "@radix-ui/react-icons";
+import user_info from "../utils/user_info.json";
 
 interface ContactProps {
   children: React.ReactNode;
@@ -34,7 +35,7 @@ function Contact() {
         method below!
       </p>
       <Link
-        href="/GarciaNicoleResumeSoftware.pdf"
+        href="/resume.pdf"
         target="_blank"
         className="flex flex-row justify-center items-center cursor-pointer bg-accent-500 py-4 px-6 rounded-full transition-transform duration-200 hover:scale-105"
       >
@@ -50,18 +51,20 @@ function Contact() {
         </div>
         <div>
           <div className="flex flex-row gap-4 mx-4">
-            <ContactItem href="https://www.linkedin.com/in/nicoleb-garcia/">
+            <ContactItem href={user_info.linkedin}>
               <LinkedInLogoIcon height={40} width={40} />
             </ContactItem>
-            <ContactItem href="https://github.com/lpurgitoryl">
+            <ContactItem
+              href={"https://github.com/" + user_info.github_username}
+            >
               <GitHubLogoIcon height={40} width={40} />
             </ContactItem>
           </div>
           <div className="flex flex-row gap-4 mx-4">
-            <ContactItem href="mailto:ngarcia201@gmail.com">
+            <ContactItem href={"mailto:" + user_info.email}>
               <EnvelopeClosedIcon height={40} width={40} />
             </ContactItem>
-            <ContactItem href="tel:9515633544">
+            <ContactItem href={"tel:" + user_info.telephone}>
               <ChatBubbleIcon height={40} width={40} />
             </ContactItem>
           </div>

@@ -8,7 +8,7 @@ import { pointsInner, pointsOuter } from "../utils/utils";
 
 const ParticleRing = () => {
   return (
-    <div className="absolute w-[98vw] h-full">
+    <div className="absolute w-[95vw] md:w-full h-full z-20 flex items-center-center">
       <Canvas
         camera={{
           position: [10, -7.5, -5],

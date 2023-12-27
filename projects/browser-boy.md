@@ -1,6 +1,6 @@
 ---
 title:  browser-boy
-date: 02-24-2000
+date: 09-16-2023
 repo: browser-boy
 demo: https://browser-boy.vercel.app/
 toolbox:
@@ -8,6 +8,7 @@ toolbox:
     - css3
     - javascript
 ---
+
 I had a lot of fun making this work and it was a great refresher of OOP and simple game concepts.
 \
 \

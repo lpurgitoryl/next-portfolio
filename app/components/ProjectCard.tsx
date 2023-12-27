@@ -82,11 +82,11 @@ function ProjectCard(props: repoInfo) {
       <hr className="my-4" />
       <h2 className="">
         Languages:{" "}
-        <div className="md:inline-flex">
+        <div className="md:inline-flex md:flex-wrap">
           {langs.map((lang) => (
             <span
               key={lang}
-              className="bg-gray-200 text-sm font-bold dark:bg-gray-800 mx-2 rounded px-[5px]"
+              className="bg-gray-200 text-sm font-bold dark:bg-gray-800 mx-2 my-2 rounded px-[5px]"
             >
               {lang}
             </span>

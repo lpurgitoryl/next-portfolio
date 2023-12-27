@@ -4,7 +4,6 @@ import Footer from "@/app/components/Footer";
 import ProjectSideNav from "./components/ProjectSideNav";
 import { format, parseISO } from "date-fns";
 import { allProjects } from "contentlayer/generated";
-import { useState } from "react";
 
 import ProjectLinks from "./components/ProjectLinks";
 
@@ -41,13 +40,15 @@ const ProjectPost = ({ params }: { params: { slug: string } }) => {
       <main className="min-h-screen bg-white dark:bg-black">
         <ProjectSideNav prev={"/projects/" + prev} next={"/projects/" + next} />
         <NavBar />
-        <article className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white">
-          <h1 className="text-7xl md:text-9xl">{project.title}</h1>
-          <time dateTime={project.date} className="mb-1 text-xs text-gray-600">
+        <article className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 dark:text-white">
+          <h1 className="text-7xl md:text-9xl my-4 break-all">
+            {project.title}
+          </h1>
+          <time dateTime={project.date} className="my-4 text-xs text-gray-600">
             {format(parseISO(project.date), "LLLL d, yyyy")}
           </time>
           <h1
-            className="my-12 text-xl md:w-4/5"
+            className="my-12 text-xl md:w-4/5 break-words"
             dangerouslySetInnerHTML={{ __html: project.body.html }}
           ></h1>
         </article>
