@@ -34,7 +34,7 @@ function Contact() {
         method below!
       </p>
       <Link
-        href="/GarciaNicoleResumeSoftware.pdf"
+        href="/resume.pdf"
         target="_blank"
         className="flex flex-row justify-center items-center cursor-pointer bg-accent-500 py-4 px-6 rounded-full transition-transform duration-200 hover:scale-105"
       >
