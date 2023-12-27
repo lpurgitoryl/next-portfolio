@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lpurgitoryl/next-portfolio/">
-    <img src="./vanillaPrototype/CC_Logo.svg" alt="Logo" width="80" height="80">
+    <img src="./public/nextjsportfolio.PNG" alt="Logo" height="300">
   </a>
 
 <h3 align="center">Nextjs Portfolio</h3>
@@ -134,7 +134,10 @@ I made this (hopefully) easy to adopt for personal use.
     "hero_description": "...",
     "about_description": "...",
     "project_description" : "...",
-    "tool_box": ["html5", "css3", "tailwindcss"]}
+    "tool_box": ["html5", "css3", "tailwindcss"],
+    "linkedin": "...full url here",
+    "email": "...",
+    "telephone": "0123456789"}
     // fill tool_box with icon names from devicon.dev
    ```
 
