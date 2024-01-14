@@ -8,19 +8,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url] -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -77,7 +64,8 @@ After learning react, I wanted to update my personal site and decided to use nex
 ![HTML]
 ![CSS]
 ![Tailwind]
-[![Vercel][Vercel]][Vercel-url]
+![ContentLayer]
+![Vercel]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -175,7 +163,7 @@ If you want to change the accent color, edit the ```tailwind.config.ts``` line 1
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-[Particle Ring](https://www.hover.dev/components/three-d) 
+[Particle Ring](https://www.hover.dev/components/three-d)
 
 [Side Bar Inspo](https://www.hover.dev/components/navigation)
 
@@ -196,4 +184,5 @@ If you want to change the accent color, edit the ```tailwind.config.ts``` line 1
 [CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
 [Nextjs]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Threejs]: https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white
-[Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white 
+[Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[ContentLayer]: https://img.shields.io/badge/contentlayer-purple?style=for-the-badge
