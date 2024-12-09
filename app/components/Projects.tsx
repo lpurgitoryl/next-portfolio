@@ -12,11 +12,11 @@ function Projects() {
 
   return (
     <section
-      className="flex justify-start items-start flex-col mx-14 md:ml-28 my-10 break-words dark:text-white"
+      className="flex justify-start items-start flex-col mx-14 md:mx-28 my-10 break-words dark:text-white"
       id="projects"
     >
       <h1 className="text-7xl md:text-9xl">Projects</h1>
-      <p className="my-12 text-xl md:w-4/5">{user_info.project_description}</p>
+      <p className="my-12 text-xl">{user_info.project_description}</p>
 
       <div className="grid md:grid-cols-2 items-center gap-20 my-12">
         {projects.map((project, idx) => (

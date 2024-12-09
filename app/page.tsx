@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import ToolBox from "./components/ToolBox";
 import SideNav from "./components/SideNav";
-// import Resume from "./components/Resume";
+import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 
 export default function Home() {
@@ -16,11 +16,11 @@ export default function Home() {
       <Hero />
       <About />
       <ToolBox />
-      {/* 
-      <Projects /> */}
+      <Projects />
       {/* <Resume /> */}
-      {/* <Contact />
-      <Footer /> */}
+
+      <Contact />
+      <Footer />
     </main>
   );
 }
