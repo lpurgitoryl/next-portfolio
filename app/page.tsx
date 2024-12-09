@@ -14,8 +14,9 @@ export default function Home() {
       {/* <SideNav />
       <NavBar /> */}
       <Hero />
-      {/* <About />
+      <About />
       <ToolBox />
+      {/* 
       <Projects /> */}
       {/* <Resume /> */}
       {/* <Contact />

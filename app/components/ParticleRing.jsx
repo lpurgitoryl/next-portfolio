@@ -16,6 +16,10 @@ const ParticleRing = () => {
         style={{}}
         className=""
       >
+        {/* TODO:
+          enable or disable pan and rotate if on mobile... maybe in the same way tailwind adjusts to screen size
+          ... media query ? enablePan={false} enableRotate={false}
+        */}
         <OrbitControls maxDistance={20} minDistance={10} enableZoom={false} />
         <directionalLight />
         <pointLight position={[-30, 0, -30]} power={10.0} />

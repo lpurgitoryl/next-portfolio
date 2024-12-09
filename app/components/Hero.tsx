@@ -6,11 +6,11 @@ function Hero() {
   return (
     <section className="h-screen" id="hero">
       <ParticleRing />
-      <div className="w-full h-full flex items-center justify-center md:px-4 md:py-4">
-        <div className="dark:text-white">
+      <div className="z-30 w-full h-full flex items-center justify-center">
+        <div className="dark:text-white px-8">
           <h1 className="text-7xl md:text-9xl">Hey!</h1>
           <h1 className="text-7xl md:text-9xl">{user_info.name}</h1>
-          <h1 className="mt-12 text-4xl md:text-4xl text-accent-500">
+          <h1 className="mt-12 text-4xl text-accent-500">
             {user_info.hero_description}
           </h1>
         </div>
