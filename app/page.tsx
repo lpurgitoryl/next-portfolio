@@ -10,16 +10,16 @@ import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-black">
-      <SideNav />
-      <NavBar />
+    <main className="bg-white dark:bg-black">
+      {/* <SideNav />
+      <NavBar /> */}
       <Hero />
-      <About />
+      {/* <About />
       <ToolBox />
-      <Projects />
+      <Projects /> */}
       {/* <Resume /> */}
-      <Contact />
-      <Footer />
+      {/* <Contact />
+      <Footer /> */}
     </main>
   );
 }
