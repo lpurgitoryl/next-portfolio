@@ -1,7 +1,10 @@
 ---
 title:  commutercalc
 date: 10-17-2023
-repo: commutercalc
+repo: https://github.com/lpurgitoryl/commutercalc
+demo: https://github.com/lpurgitoryl/commutercalc
+description: I started wondering how much each coffee run is costing me in terms of gas, so I created the "CommuterCalc". It'll tell you how much it costs to get from destination A to B!
+media: /jinchuriki.png
 toolbox:
     - html5
     - css3
