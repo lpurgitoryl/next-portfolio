@@ -1,5 +1,5 @@
 import user_info from "../utils/user_info.json";
-import ProjectCard from "./ProjectCard copy";
+import ProjectCard from "./ProjectCard";
 import { compareDesc } from "date-fns";
 
 // projects will be shown based on date
@@ -8,12 +8,17 @@ function Projects() {
   const projects = [
     {
       title: "jinchuriki",
-      repo: "",
+      repo: "https://github.com/lpurgitoryl/jinchuriki",
       description:
-        'I started wondering how much each coffee run is costing me in terms of gas, so I created the "CommuterCalc". It\'ll tell you how much it costs to get from destination A to B!',
-      demo: "https://github.com/lpurgitoryl/jinchuriki",
+        "A (cool) project that lets you see every character in Naruto with their character info!",
+      demo: "https://jinchuriki.vercel.app/",
       media: "/jinchuriki.png",
-      toolbox: "",
+      toolbox: [
+        "tailwindcss",
+        "typescript",
+        "nextjs",
+      ],
+      date: "12/15/2024"
     },
   ];
 
@@ -34,6 +39,8 @@ function Projects() {
             description={project.description}
             demo={project.demo}
             media={project.media}
+            toolbox={project.toolbox}
+            date={project.date}
           />
         ))}
       </div>
