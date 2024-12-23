@@ -64,9 +64,6 @@ function Contact() {
             <ContactItem href={"mailto:" + user_info.email}>
               <EnvelopeClosedIcon height={40} width={40} />
             </ContactItem>
-            <ContactItem href={"tel:" + user_info.telephone}>
-              <ChatBubbleIcon height={40} width={40} />
-            </ContactItem>
           </div>
         </div>
       </div>

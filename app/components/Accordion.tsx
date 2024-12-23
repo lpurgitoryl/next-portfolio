@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 
 function Icon({ icon }: { icon: string }) {
   return (
@@ -55,16 +57,21 @@ export default function Accordion(props: experienceInfo) {
         </span>
       </div>
       <div
-        className={`px-4 py-4 bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border border-accent-500 overflow-hidden flex flex-col gap-8 ${
-          isShowing ? "max-h-fit opacity-100 my-4" : "max-h-0 opacity-0"
+        className={`px-4 py-4 bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border-accent-500 overflow-hidden flex flex-col gap-8 ${
+          isShowing ? "max-h-fit opacity-100 my-4 border" : "max-h-0 opacity-0 border-none"
         }`}
         style={{
-          transition: "max-height 0.5s ease-in-out, opacity 1s ease-in-out",
+          transition: "max-height 0.5s ease-in-out, opacity 1s ease-in-out, border 0.5 ease-in-out",
         }}
       >
         <div className="inline-flex gap-8 font-bold">
           <span>📍 {props.location}</span>
-          <span>🔗 {props.website}</span>
+          <Link href={"https://www." + props.website}>
+            🔗{" "}
+            <span className=" underline underline-offset-2">
+              {props.website}
+            </span>
+          </Link>
         </div>
         <div className="inline-flex w-full">{props.description}</div>
         <div className="flex items-center">

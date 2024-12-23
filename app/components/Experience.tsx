@@ -17,7 +17,7 @@ function Experience() {
       website: "internetbrands.com",
       dates: "June 2022 - July 2023",
       description:
-        "End to end testing of IB's health vertical applcication including API's, and User Interface flows.",
+        "End to end testing of IB's health vertical applcications including API's, and User Interface flows.",
       toolbox: ["selenium","postman","jenkins","python"],
     },
   ];
