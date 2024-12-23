@@ -1,12 +1,26 @@
-"use client";
-import { useState } from "react";
+import Accordion from "./Accordion";
 
 function Experience() {
-  const [isShowing, setIsShowing] = useState(false);
-
-  const toggle = () => {
-    setIsShowing(!isShowing);
-  };
+  const experience = [
+    {
+      postion: "MES Consultant (Software Engineer) @ Andea",
+      location: "Brea, CA",
+      website: "andea.com",
+      dates: "January 2024 - Present",
+      description:
+        "accordion text accordion textaccordion textaccordion text accordiontextaccordion textaccordion text accordion textaccordion textaccordiontextaccordion textaccordion textaccordion textaccordion textaccordion",
+      toolbox: ["javascript", "jquery", "microsoftsqlserver","html5","css3"],
+    },
+    {
+      postion: "Software Development Engineer in Test @ Internet Brands",
+      location: "El Segundo, CA",
+      website: "internetbrands.com",
+      dates: "June 2022 - July 2023",
+      description:
+        "End to end testing of IB's health vertical applcication including API's, and User Interface flows.",
+      toolbox: ["selenium","postman","jenkins","python"],
+    },
+  ];
 
   return (
     <section
@@ -16,62 +30,20 @@ function Experience() {
       <h1 className="text-7xl md:text-9xl mb-12 text-wrap break-all">
         Experience
       </h1>
-      <div
-        className="shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl w-full border hover:border-accent-500"
-        onClick={toggle}
-      >
-        <span className="inline-flex w-full flex-col md:flex-row md:justify-between">
-          MES Consultant @ Andea
-          <span className="font-extrabold inline-flex gap-2 justify-end">
-            {/* mx-4 md:mx-8 */}
-            <span className="">2024 - Present</span>+
-          </span>
-        </span>
-      </div>
-      <div
-        className={`my-4 px-4 py-4 bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border border-accent-500 transition-all overflow-hidden ${
-          isShowing ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-        style={{
-          transition: "max-height 0.3s ease, opacity 0.3s ease",
-        }}
-      >
-        <span className="inline-flex w-full">
-          accordion text accordion textaccordion textaccordion text accordion
-          text accordion text accordion text accordion text accordion
-          textaccordion textaccordion text accordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion text accordion textaccordion textaccordion text
-          accordion text accordion text accordion text accordion text accordion
-          textaccordion textaccordion text accordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion
-          textaccordionaccordion text accordion textaccordion textaccordion text
-          accordion text accordion text accordion text accordion text accordion
-          textaccordion textaccordion text accordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion
-          textaccordionaccordion text accordion textaccordion textaccordion text
-          accordion text accordion text accordion text accordion text accordion
-          textaccordion textaccordion text accordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion
-          textaccordionaccordion text accordion textaccordion textaccordion text
-          accordion text accordion text accordion text accordion text accordion
-          textaccordion textaccordion text accordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-          textaccordion textaccordion textaccordion textaccordion textaccordion
-        </span>
-      </div>
+      {experience.map((experience, idx) => (
+        <Accordion
+          key={idx}
+          postion={experience.postion}
+          dates={experience.dates}
+          description={experience.description}
+          toolbox={experience.toolbox}
+          location={experience.location}
+          website={experience.website}
+        />
+      ))}
+
     </section>
   );
 }
 
 export default Experience;
-
