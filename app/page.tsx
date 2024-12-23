@@ -7,6 +7,8 @@ import ToolBox from "./components/ToolBox";
 import SideNav from "./components/SideNav";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
+import Accordion from "./components/Accordion";
+import Experience from "./components/Experience";
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
       <ToolBox />
       <Projects />
       {/* <Resume /> */}
-
+      <Experience />
       <Contact />
       <Footer />
     </main>

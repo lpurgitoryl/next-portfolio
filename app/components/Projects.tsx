@@ -13,13 +13,10 @@ function Projects() {
         "A (cool) project that lets you see every character in Naruto with their character info!",
       demo: "https://jinchuriki.vercel.app/",
       media: "/jinchuriki.png",
-      toolbox: [
-        "tailwindcss",
-        "typescript",
-        "nextjs",
-      ],
-      date: "12/15/2024"
+      toolbox: ["tailwindcss", "typescript", "nextjs"],
+      date: "12/15/2024",
     },
+
   ];
 
   return (
