@@ -8,8 +8,15 @@ function Experience() {
       website: "andea.com",
       dates: "January 2024 - Present",
       description:
-        "accordion text accordion textaccordion textaccordion text accordiontextaccordion textaccordion text accordion textaccordion textaccordiontextaccordion textaccordion textaccordion textaccordion textaccordion",
-      toolbox: ["javascript", "jquery", "microsoftsqlserver","html5","css3"],
+        "Configuring, implementing, and maintaining customer solutions using DELMIA Apriso manufacturing execution system for Andea's clients in the fields of production, logistics, and quality management.",
+      toolbox: [
+        "javascript",
+        "csharp",
+        "jquery",
+        "microsoftsqlserver",
+        "html5",
+        "css3",
+      ],
     },
     {
       postion: "Software Development Engineer in Test @ Internet Brands",
@@ -18,7 +25,25 @@ function Experience() {
       dates: "June 2022 - July 2023",
       description:
         "End to end testing of IB's health vertical applcications including API's, and User Interface flows.",
-      toolbox: ["selenium","postman","jenkins","python"],
+      toolbox: ["selenium", "postman", "jenkins", "python"],
+    },
+    {
+      postion: "Student @ University of California, Riverside",
+      location: "Riverside, CA",
+      website: "ucr.edu",
+      dates: "July 2018 - June 2023",
+      description:
+        "Completed my undergraduate education with a Bachelor of Science in Computer Engineering.",
+      toolbox: [
+        "typescript",
+        "nextjs",
+        "python",
+        "microsoftsqlserver",
+        "cplusplus",
+        "arduino",
+        "raspberrypi",
+        "git",
+      ],
     },
   ];
 
@@ -41,7 +66,6 @@ function Experience() {
           website={experience.website}
         />
       ))}
-
     </section>
   );
 }

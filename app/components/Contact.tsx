@@ -30,17 +30,19 @@ function Contact() {
       id="contact"
     >
       <h1 className="text-7xl md:text-9xl">Contact</h1>
-      <p className="my-12 text-xl md:w-4/5">
-        Check out my resume for more about me and feel free to connect using any
-        method below!
+
+      <p className="my-12 text-xl">
+        Check out my resume for more details about me and feel free to connect
+        using any method below!
       </p>
+      <p className="mb-12 text-xl">Email: {user_info.email}</p>
       <Link
         href="/resume.pdf"
         target="_blank"
         className="flex flex-row justify-center items-center cursor-pointer bg-accent-500 py-4 px-6 rounded-full transition-transform duration-200 hover:scale-105"
       >
         <DownloadIcon height={32} width={32} color="white" />
-        <p className="text-xl text-white md:w-4/5">View Resume</p>
+        <p className="text-xl text-white">View Resume</p>
       </Link>
       <div className="flex my-14">
         <div className="border-r-2 border-black dark:border-white">
