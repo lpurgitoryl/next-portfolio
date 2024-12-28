@@ -29,8 +29,12 @@ function NavBar() {
   }
 
   return (
-    <nav className="absolute bg-inherit bg-opacity-50 flex mx-14 md:mx-28 my-10 dark:text-white border border-black z-40">
-        asdfghjkl
+    <nav className="absolute bg-inherit bg-opacity-50 flex w-full justify-between items-center px-14 md:px-28 py-10 shadow-sm dark:shadow-white/20  ">
+      {/* 
+      
+      bg-inherit bg-opacity-50 flex mx-14 md:mx-28 my-10 dark:text-white border border-black z-40*/}
+
+      <div className="border border-black w-full">asdasdsadas</div>
       {/* <Link href="/" className="cursor-pointer">
         <Image
           src={favicon}

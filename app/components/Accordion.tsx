@@ -57,11 +57,11 @@ export default function Accordion(props: experienceInfo) {
         </span>
       </div>
       <div
-        className={`px-4 py-4 bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border-accent-500 overflow-hidden flex flex-col gap-8 ${
-          isShowing ? "max-h-fit opacity-100 my-4 border" : "max-h-0 opacity-0 border-none"
+        className={`px-4 py-4 border bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border-accent-500 overflow-hidden flex flex-col gap-8 ${
+          isShowing ? "max-h-fit opacity-100 my-4" : "max-h-0 opacity-0"
         }`}
         style={{
-          transition: "max-height 0.5s ease-in-out, opacity 1s ease-in-out, border 0.5 ease-in-out",
+          transition: "max-height 1s ease, opacity 1s ease",
         }}
       >
         <div className="inline-flex gap-8 font-bold">
@@ -75,8 +75,8 @@ export default function Accordion(props: experienceInfo) {
         </div>
         <div className="inline-flex w-full">{props.description}</div>
         <div className="flex items-center">
-          {props.toolbox.map((el: string) => (
-            <Icon icon={el} />
+          {props.toolbox.map((el: string, idx: number) => (
+            <Icon icon={el} key={idx} />
           ))}
         </div>
       </div>

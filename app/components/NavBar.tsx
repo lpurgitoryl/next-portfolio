@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import * as Toggle from "@radix-ui/react-toggle";
+// import * as Toggle from "@radix-ui/react-toggle";
 import Link from "next/link";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+// import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import favicon from "../favicon.ico";
 
@@ -39,14 +39,14 @@ function NavBar() {
           className="rounded-full cursor-pointer"
         />
       </Link>
-      <Toggle.Root
+      {/* <Toggle.Root
         className="Toggle w-8 h-8 flex justify-center items-center bg-slate-300 rounded-lg"
         aria-label="Toggle italic"
         defaultPressed={mode}
         onPressedChange={changeLocalMode}
       >
         {mode ? <SunIcon /> : <MoonIcon />}
-      </Toggle.Root>
+      </Toggle.Root> */}
     </nav>
   );
 }

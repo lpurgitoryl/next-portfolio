@@ -13,7 +13,7 @@ export default function Home() {
     <main className="bg-white dark:bg-black">
       {/* <SideNav />
       <NavBar /> */}
-      {/* <GlassNavBar /> */}
+      <GlassNavBar />
       <Hero />
       <About />
       <ToolBox />
