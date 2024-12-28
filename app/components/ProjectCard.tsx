@@ -57,8 +57,8 @@ function ProjectCard(props: repoInfo) {
       <hr className="my-4" />
       <h2 className="flex items-center">
         Tools:
-        {props.toolbox.map((el: string) => (
-          <Icon icon={el} />
+        {props.toolbox.map((el: string, idx: number) => (
+          <Icon icon={el} key={idx} />
         ))}
       </h2>
       <h3 className="text-gray-500">Updated on {props.date}</h3>
