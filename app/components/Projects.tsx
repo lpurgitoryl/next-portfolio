@@ -1,6 +1,5 @@
 import user_info from "../utils/user_info.json";
 import ProjectCard from "./ProjectCard";
-import { compareDesc } from "date-fns";
 
 // projects will be shown based on date
 

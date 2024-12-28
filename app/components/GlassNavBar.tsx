@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import * as Toggle from "@radix-ui/react-toggle";
 import Link from "next/link";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
@@ -15,10 +14,10 @@ if (typeof window !== "undefined") {
 function NavBar() {
   const [mode, setMode] = useState(false);
 
-  function changeLocalMode(e: boolean) {
-    setMode(e);
+  function changeLocalMode() {
+    setMode(!mode);
 
-    if (e) {
+    if (!mode) {
       localStorage.setItem("Theme", "dark");
       document.body.classList.add("dark");
       return;
@@ -29,29 +28,51 @@ function NavBar() {
   }
 
   return (
-    <nav className="absolute bg-inherit bg-opacity-50 flex w-full justify-between items-center px-14 md:px-28 py-10 shadow-sm dark:shadow-white/20  ">
-      {/* 
-      
-      bg-inherit bg-opacity-50 flex mx-14 md:mx-28 my-10 dark:text-white border border-black z-40*/}
-
-      <div className="border border-black w-full">asdasdsadas</div>
-      {/* <Link href="/" className="cursor-pointer">
-        <Image
-          src={favicon}
-          width={32}
-          height={32}
-          alt="Picture of the author"
-          className="rounded-full cursor-pointer"
-        />
-      </Link>
-      <Toggle.Root
-        className="Toggle w-8 h-8 flex justify-center items-center bg-slate-300 rounded-lg"
-        aria-label="Toggle italic"
-        defaultPressed={mode}
-        onPressedChange={changeLocalMode}
-      >
-        {mode ? <SunIcon /> : <MoonIcon />}
-      </Toggle.Root> */}
+    <nav className="fixed top-0 flex w-full justify-end md:justify-between items-center px-4 md:px-28 py-2 z-40 dark:text-white md:backdrop-blur-3xl">
+      {/* desktop/tablets nav */}
+      <div className="hidden w-full rounded-full md:flex justify-around items-center py-1">
+        <Link href="/" className="cursor-pointer">
+          <Image
+            src={favicon}
+            width={32}
+            height={32}
+            alt="Picture of the author"
+            className="rounded-full cursor-pointer"
+          />
+        </Link>
+        <Link href="/#hero" className="cursor-pointer">
+          Home
+        </Link>
+        <Link href="/#about" className="cursor-pointer">
+          About
+        </Link>
+        <Link href="/#projects" className="cursor-pointer">
+          Projects
+        </Link>
+        <Link href="/#experience" className="cursor-pointer">
+          Experience
+        </Link>
+        <Link href="/#contact" className="cursor-pointer">
+          Contact
+        </Link>
+        <span></span>
+        <span></span>
+        <button
+          onClick={changeLocalMode}
+          className="w-8 h-8 flex justify-center items-center rounded-lg bg-accent-100/70"
+        >
+          {mode ? <SunIcon /> : <MoonIcon />}
+        </button>
+      </div>
+      {/* mobile nav, dark/light only */}
+      <div className="md:hidden py-1">
+        <button
+          onClick={changeLocalMode}
+          className="w-8 h-8 flex justify-center items-center rounded-lg bg-accent-100/70"
+        >
+          {mode ? <SunIcon /> : <MoonIcon />}
+        </button>
+      </div>
     </nav>
   );
 }
