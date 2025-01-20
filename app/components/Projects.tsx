@@ -1,7 +1,4 @@
-import user_info from "../utils/user_info.json";
 import ProjectCard from "./ProjectCard";
-
-// projects will be shown based on date
 
 function Projects() {
   const projects = [
@@ -15,7 +12,6 @@ function Projects() {
       toolbox: ["tailwindcss", "typescript", "nextjs"],
       date: "12/15/2024",
     },
-
   ];
 
   return (
@@ -24,7 +20,10 @@ function Projects() {
       id="projects"
     >
       <h1 className="text-7xl md:text-9xl">Projects</h1>
-      <p className="my-12 text-xl">{user_info.project_description}</p>
+      <p className="my-12 text-xl">
+        Take a look at some of my favorite projects. These cover different
+        categories from IOT, embedded systems, computer vision and more.
+      </p>
 
       <div className="grid md:grid-cols-2 items-center gap-20 my-12">
         {projects.map((project, idx) => (

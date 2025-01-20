@@ -33,7 +33,7 @@ function Experience() {
       website: "ucr.edu",
       dates: "July 2018 - June 2023",
       description:
-        "Completed my undergraduate education with a Bachelor of Science in Computer Engineering.",
+        "Completed my undergraduate education with a Bachelor of Science in Computer Engineering. Ontop of my studies, I was an Undergraduate Research/Media Developer Student Assistant for XCITE from April 2019 to June 2023.",
       toolbox: [
         "typescript",
         "nextjs",

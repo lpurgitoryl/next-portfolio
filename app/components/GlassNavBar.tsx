@@ -40,19 +40,34 @@ function NavBar() {
             className="rounded-full cursor-pointer"
           />
         </Link>
-        <Link href="/#hero" className="cursor-pointer">
+        <Link
+          href="/#hero"
+          className="cursor-pointer hover:text-accent-500 underline underline-offset-2"
+        >
           Home
         </Link>
-        <Link href="/#about" className="cursor-pointer">
+        <Link
+          href="/#about"
+          className="cursor-pointer hover:text-accent-500 underline underline-offset-2"
+        >
           About
         </Link>
-        <Link href="/#projects" className="cursor-pointer">
+        <Link
+          href="/#projects"
+          className="cursor-pointer hover:text-accent-500 underline underline-offset-2"
+        >
           Projects
         </Link>
-        <Link href="/#experience" className="cursor-pointer">
+        <Link
+          href="/#experience"
+          className="cursor-pointer hover:text-accent-500 underline underline-offset-2"
+        >
           Experience
         </Link>
-        <Link href="/#contact" className="cursor-pointer">
+        <Link
+          href="/#contact"
+          className="cursor-pointer hover:text-accent-500 underline underline-offset-2"
+        >
           Contact
         </Link>
         <span></span>

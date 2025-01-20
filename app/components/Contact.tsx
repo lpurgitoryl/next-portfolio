@@ -6,8 +6,12 @@ import {
   ChatBubbleIcon,
   DownloadIcon,
 } from "@radix-ui/react-icons";
-import user_info from "../utils/user_info.json";
 
+const user_info = {
+  github_username: "lpurgitoryl",
+  linkedin: "https://www.linkedin.com/in/nicoleb-garcia/",
+  email: "ngarcia201@gmail.com"
+};
 interface ContactProps {
   children: React.ReactNode;
   href: string;
