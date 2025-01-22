@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { AnimatePresence } from "motion/react";
+import * as motion from "motion/react-client";
 
 function Icon({ icon }: { icon: string }) {
   return (
@@ -43,7 +44,7 @@ export default function Accordion(props: experienceInfo) {
   return (
     <>
       <div
-        className="group shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl w-full border hover:border-accent-500"
+        className="group shadow-lg px-4 py-4 mb-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl w-full border hover:border-accent-500"
         onClick={toggle}
       >
         <span className="inline-flex w-full flex-col md:flex-row md:justify-between">
@@ -56,30 +57,34 @@ export default function Accordion(props: experienceInfo) {
           </span>
         </span>
       </div>
-      <div
-        className={`px-4 py-4 border bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border-accent-500 overflow-hidden flex flex-col gap-8 ${
-          isShowing ? "max-h-fit opacity-100 my-4" : "max-h-0 opacity-0"
-        }`}
-        style={{
-          transition: "max-height 1s ease, opacity 1s ease",
-        }}
-      >
-        <div className="inline-flex gap-8 font-bold">
-          <span>📍 {props.location}</span>
-          <Link href={"https://www." + props.website}>
-            🔗{" "}
-            <span className=" underline underline-offset-2">
-              {props.website}
-            </span>
-          </Link>
-        </div>
-        <div className="inline-flex w-full">{props.description}</div>
-        <div className="flex items-center">
-          {props.toolbox.map((el: string, idx: number) => (
-            <Icon icon={el} key={idx} />
-          ))}
-        </div>
-      </div>
+
+      <AnimatePresence>
+        {isShowing ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            key={props.postion + props.dates}
+            className="px-4 py-4 border bg-accent-100/10 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 rounded-xl w-full border-accent-500 overflow-hidden flex flex-col gap-8 max-h-fit opacity-100 my-4"
+          >
+            <div className="inline-flex gap-8 font-bold">
+              <span>📍 {props.location}</span>
+              <Link href={"https://www." + props.website}>
+                🔗{" "}
+                <span className=" underline underline-offset-2">
+                  {props.website}
+                </span>
+              </Link>
+            </div>
+            <div className="inline-flex w-full">{props.description}</div>
+            <div className="flex items-center">
+              {props.toolbox.map((el: string, idx: number) => (
+                <Icon icon={el} key={idx} />
+              ))}
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </>
   );
 }
