@@ -35,7 +35,7 @@ function Icon({ icon }: { icon: string }) {
 
 function WorkInProgress() {
   return (
-    <div className="hover:scale-110 hover:shadow-lg dark:text-black relative dark:shadow-white/50 w-fit px-4 py-2 font-bold text-sm uppercase bg-yellow-300 border-2 rounded-md overflow-hidden">
+    <div className="dark:text-black relative w-fit px-4 py-2 font-bold text-sm uppercase bg-yellow-300 border-2 rounded-md overflow-hidden">
       Work In Progress
       <div className="absolute inset-0 bg-[linear-gradient(153deg,#f2e427_25%,#000_25%,#000_50%,#f2e427_50%,#f2e427_75%,#000_75%,#000_100%)] bg-[size:176.22px_89.79px] opacity-40 animate-cautionTape"></div>
     </div>
