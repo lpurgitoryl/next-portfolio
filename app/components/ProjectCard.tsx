@@ -11,6 +11,7 @@ interface repoInfo {
   media: string;
   toolbox: string[];
   date: string;
+  isWip: boolean;
 }
 
 function Icon({ icon }: { icon: string }) {
@@ -31,6 +32,15 @@ function Icon({ icon }: { icon: string }) {
     </span>
   );
 }
+
+function WorkInProgress() {
+  return (
+    <div className="hover:scale-110 hover:shadow-lg dark:text-black relative dark:shadow-white/50 w-fit px-4 py-2 font-bold text-sm uppercase bg-yellow-300 border-2 rounded-md overflow-hidden">
+      Work In Progress
+      <div className="absolute inset-0 bg-[linear-gradient(153deg,#f2e427_25%,#000_25%,#000_50%,#f2e427_50%,#f2e427_75%,#000_75%,#000_100%)] bg-[size:176.22px_89.79px] opacity-40 animate-cautionTape"></div>
+    </div>
+  );
+};
 
 function ProjectCard(props: repoInfo) {
   return (
@@ -62,6 +72,7 @@ function ProjectCard(props: repoInfo) {
         ))}
       </h2>
       <h3 className="text-gray-500">Updated on {props.date}</h3>
+      { props.isWip ? <WorkInProgress /> : ""}
     </div>
   );
 }

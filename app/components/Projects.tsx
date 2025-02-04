@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 function Projects() {
   const projects = [
     {
-      title: "jinchuriki",
+      title: "Jinchuriki",
       repo: "https://github.com/lpurgitoryl/jinchuriki",
       description:
         "A (cool) project that lets you see every character in Naruto with their character info!",
@@ -11,6 +11,18 @@ function Projects() {
       media: "/jinchuriki.png",
       toolbox: ["tailwindcss", "typescript", "nextjs"],
       date: "12/15/2024",
+      isWip: false
+    },
+    {
+      title: "Syncify",
+      repo: "https://github.com/lpurgitoryl/Syncify",
+      description:
+        "A Spotify now playing visualizer built with Typescript and React!",
+      demo: "https://syncify.vercel.app/",
+      media: "/Syncify.png",
+      toolbox: ["tailwindcss", "typescript", "react", "vitejs"],
+      date: "1/20/2025",
+      isWip: true
     },
   ];
 
@@ -36,6 +48,7 @@ function Projects() {
             media={project.media}
             toolbox={project.toolbox}
             date={project.date}
+            isWip={project.isWip}
           />
         ))}
       </div>

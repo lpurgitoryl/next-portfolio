@@ -6,6 +6,9 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import favicon from "../favicon.ico";
 
+import { AnimatePresence } from "motion/react";
+import * as motion from "motion/react-client";
+
 if (typeof window !== "undefined") {
   // Perform localStorage action
   localStorage.setItem("Theme", "light");
@@ -72,21 +75,29 @@ function NavBar() {
         </Link>
         <span></span>
         <span></span>
-        <button
+        <motion.button
           onClick={changeLocalMode}
           className="w-8 h-8 flex justify-center items-center rounded-lg bg-accent-100/70"
+          key={mode ? "SunIcon" : "MoonIcon"}
+          initial={{ y: 0, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, type: "tween" }}
         >
           {mode ? <SunIcon /> : <MoonIcon />}
-        </button>
+        </motion.button>
       </div>
       {/* mobile nav, dark/light only */}
       <div className="md:hidden py-1">
-        <button
+        <motion.button
           onClick={changeLocalMode}
           className="w-8 h-8 flex justify-center items-center rounded-lg bg-accent-100/70"
+          key={mode ? "SunIcon" : "MoonIcon"}
+          initial={{ y: 0, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, type: "tween" }}
         >
           {mode ? <SunIcon /> : <MoonIcon />}
-        </button>
+        </motion.button>
       </div>
     </nav>
   );
