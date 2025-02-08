@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-After learning react, I wanted to update my personal site and decided to use nextjs! I also wanted to make this site easy to customize for other devs to use. I tried to make it easy to make project posts by connecting to the github api, using contentlayer for markdown parsing, and the built-in dynamic routing for navigation to each post. I hope you like it!  
+After learning react, I wanted to update my personal site and decided to use nextjs! I also wanted to make this site easy to customize for other devs to use. I hope you like it!  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,34 +106,46 @@ Make sure you have npm installed with
 
 I made this (hopefully) easy to adopt for personal use.
 
-1. Open the user_info.json file in any text editor
+1. Navigate to the components folder and just edit section descriptions.
 
-   ```sh
-    app/utils/user_info.json
-   ```
-
-2. Edit the following feilds and then save
+2. Project information is stored in Projects.tsx
 
    ```json
-   {"github_username": "...",
-    "name": "I'm ...",
-    "hero_description": "...",
-    "about_description": "...",
-    "project_description" : "...",
-    "tool_box": ["html5", "css3", "tailwindcss"],
+   {
+    "title": "...",
+    "repo": "I'm ...",
+    "description": "...",
+    "demo": "...",
+    "media" : "...",
+    "toolbox": ["html5", "css3", "tailwindcss"],
     "linkedin": "...full url here",
-    "email": "...",
-    "telephone": "0123456789"}
-    // fill tool_box with icon names from devicon.dev
+    "date": "...",
+    "isWip": boolean
+   }
+    // fill toolbox with icon names from devicon.dev
    ```
+3. Experience information is stored in Experience.tsx
 
-3. add your own resume with the name of "resume" in the public folder
+   ```json
+   {
+    "postion": "...",
+    "location": "I'm ...",
+    "website": "...",
+    "dates": "...",
+    "description" : "...",
+    "toolbox": ["html5", "css3", "tailwindcss"],
+    }
+    // fill toolbox with icon names from devicon.dev
+   ```
+4. Contact info in Contact.tsx
+
+6. add your own resume with the name of "resume" in the public folder
 
    ```sh
     resume.pdf
    ```
 
-4. Deploy your site on Vercel!
+7. Deploy your site on Vercel!
 
 ### Accent Color
 
@@ -154,7 +166,6 @@ If you want to change the accent color, edit the ```tailwind.config.ts``` line 1
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nicoleb-garcia/
-[product-screenshot]: ./vanillaPrototype/CC_screenshot.PNG
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
