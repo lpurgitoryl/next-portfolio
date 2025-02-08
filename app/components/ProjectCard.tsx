@@ -1,6 +1,5 @@
 "use client";
 
-import dateFormat, { masks } from "dateformat";
 import Image from "next/image";
 import Link from "next/link";
 interface repoInfo {
@@ -16,7 +15,7 @@ interface repoInfo {
 
 function Icon({ icon }: { icon: string }) {
   return (
-    <span className="hover:scale-110 hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl">
+    <span className="hover:scale-110 hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl" title={icon}>
       <Image
         src={
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/" +

@@ -11,7 +11,7 @@ function Projects() {
       media: "/jinchuriki.png",
       toolbox: ["tailwindcss", "typescript", "nextjs"],
       date: "12/15/2024",
-      isWip: false
+      isWip: false,
     },
     {
       title: "Syncify",
@@ -22,7 +22,29 @@ function Projects() {
       media: "/Syncify.png",
       toolbox: ["tailwindcss", "typescript", "react", "vitejs"],
       date: "1/20/2025",
-      isWip: true
+      isWip: true,
+    },
+    {
+      title: "Autonomous RC Car",
+      repo: "https://github.com/lpurgitoryl/rc-car",
+      description:
+        "It's a modified off-the-shelf rc from a big box store that drives it self!",
+      demo: "https://www.youtube.com/watch?v=KAy_LBTywio",
+      media: "/RCCar.png",
+      toolbox: ["python", "cplusplus", "raspberrypi", "opencv", "arduino"],
+      date: "3/12/2023",
+      isWip: false,
+    },
+    {
+      title: "Automated Curtain Opener",
+      repo: "https://github.com/lpurgitoryl/FRDM-K64F-CurtainOpener",
+      description:
+        "This is an embedded sytems project. It uses a microcontroller to sense a noise based on a threshold and actuate motor control for opening and closing.",
+      demo: "https://www.youtube.com/watch?v=sEjKm0Vb6mc",
+      media: "/CurtainOpener.png",
+      toolbox: ["c"],
+      date: "6/02/2023",
+      isWip: false,
     },
   ];
 
