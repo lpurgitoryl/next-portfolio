@@ -1,99 +1,77 @@
 "use client";
 
-import dateFormat, { masks } from "dateformat";
-import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 interface repoInfo {
-  repo_name: string;
-  username: string;
+  title: string;
+  repo: string;
+  demo: string;
+  description: string;
+  media: string;
+  toolbox: string[];
+  date: string;
+  isWip: boolean;
 }
-// for each repo in repos from projects json
-// repo specfic description
-// language percentages
-// updated @ date
 
-// obvi this doesnt give the best run time if there was hellla languages used but i doubt sm1 is gonna like a gallizon diff langs in a proj
-// so LGTM
-
-function languagePercentage(langs: JSON): string[] {
-  let total = 0;
-  let name: string[] = [];
-  let vals: number[] = [];
-  let done = [];
-
-  Object.entries(langs).forEach((entry) => {
-    const [key, value] = entry;
-    name.push(key);
-    vals.push(value);
-    total += value;
-  });
-
-  for (let i = 0; i < name.length; i++) {
-    vals[i] = Math.round((vals[i] / total) * 100);
-    done.push(name[i] + ": " + vals[i] + "%");
-  }
-
-  return done;
+function Icon({ icon }: { icon: string }) {
+  return (
+    <span className="hover:scale-110 hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl" title={icon}>
+      <Image
+        src={
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/" +
+          icon +
+          "/" +
+          icon +
+          "-original.svg"
+        }
+        height={20}
+        width={20}
+        alt={"Icon of " + icon}
+      />
+    </span>
+  );
 }
+
+function WorkInProgress() {
+  return (
+    <div className="dark:text-black relative w-fit px-4 py-2 font-bold text-sm uppercase bg-yellow-300 border-2 rounded-md overflow-hidden">
+      Work In Progress
+      <div className="absolute inset-0 bg-[linear-gradient(153deg,#f2e427_25%,#000_25%,#000_50%,#f2e427_50%,#f2e427_75%,#000_75%,#000_100%)] bg-[size:176.22px_89.79px] opacity-40 animate-cautionTape"></div>
+    </div>
+  );
+};
 
 function ProjectCard(props: repoInfo) {
-  const baseURL = "https://api.github.com/";
-  const repoEndpoint = "repos/" + props.username;
-  const [description, setDescription] = useState("");
-  const [updated, setUpdated] = useState("");
-  const [langs, setLangs] = useState<string[]>([]);
-
-  async function getRepoInfo(repo: string) {
-    let lastUpdated = "";
-    let repoDescription = "";
-
-    const langs = await fetch(baseURL + repoEndpoint + "/" + repo)
-      .then((res) => res.json())
-      .then((data) => {
-        lastUpdated = dateFormat(data["updated_at"], "longDate");
-        repoDescription = data["description"];
-        return fetch(data["languages_url"]);
-      })
-      .then((res) => res.json())
-      .then((data) => data);
-
-    const langBreakdown = languagePercentage(langs);
-    setLangs(langBreakdown);
-    setUpdated(lastUpdated);
-    setDescription(repoDescription);
-  }
-  // i might not need this useeffect
-  useEffect(() => {
-    getRepoInfo(props.repo_name);
-  }, []);
-
   return (
     <div className="shadow-lg rounded-2xl border dark:shadow-white/50 px-8 py-8 hover:scale-[101%] hover:transition-all hover:border-accent-500">
-      <h1 className="text-xl font-semibold">{props.repo_name}</h1>
-      <p className="">{description}</p>
-      <div className="w-full flex justify-center my-2">
+      <h1 className="text-xl font-semibold">{props.title}</h1>
+      <p className="">{props.description}</p>
+      <Link href={props.demo}>
+        <Image src={props.media} alt="demo image" width={500} height={500} />
+      </Link>
+      <div className="w-full flex justify-around my-2">
         <Link
-          href={`/projects/${props.repo_name}`}
-          className="border-2 rounded-md py-1 w-1/2 flex justify-center my-2"
+          href={props.demo}
+          className="border-2 rounded-md py-1 px-1 mx-1 md:w-1/2 flex justify-center my-2 hover:border-accent-500"
         >
-          View Project
+          View Demo
+        </Link>
+        <Link
+          href={props.repo}
+          className="border-2 rounded-md py-1 px-1 mx-1 md:w-1/2 flex justify-center my-2 hover:border-accent-500"
+        >
+          Github
         </Link>
       </div>
       <hr className="my-4" />
-      <h2 className="">
-        Languages:{" "}
-        <div className="md:inline-flex md:flex-wrap">
-          {langs.map((lang) => (
-            <span
-              key={lang}
-              className="bg-gray-200 text-sm font-bold dark:bg-gray-800 mx-2 my-2 rounded px-[5px]"
-            >
-              {lang}
-            </span>
-          ))}
-        </div>
+      <h2 className="flex items-center">
+        Tools:
+        {props.toolbox.map((el: string, idx: number) => (
+          <Icon icon={el} key={idx} />
+        ))}
       </h2>
-      <h3 className="text-gray-500">Updated on {updated}</h3>
+      <h3 className="text-gray-500">Updated on {props.date}</h3>
+      { props.isWip ? <WorkInProgress /> : ""}
     </div>
   );
 }

@@ -64,7 +64,6 @@ After learning react, I wanted to update my personal site and decided to use nex
 ![HTML]
 ![CSS]
 ![Tailwind]
-![ContentLayer]
 ![Vercel]
 
 
@@ -134,25 +133,7 @@ I made this (hopefully) easy to adopt for personal use.
     resume.pdf
    ```
 
-4. Create your own project posts
-
-   ```sh
-   cd projects/
-   touch newprojectname.md
-   ```
-
-5. Add content, save, and then deloy your site on Vercel!
-
-   ```
-   ---
-   title:  frdm-k64f-curtainopener
-   date: 06-02-2023
-   repo: frdm-k64f-curtainopener
-   toolbox:
-      - c
-   ---
-   This project is meant to simulate a single component in a smart home system....
-   ```
+4. Deploy your site on Vercel!
 
 ### Accent Color
 
@@ -178,11 +159,8 @@ If you want to change the accent color, edit the ```tailwind.config.ts``` line 1
 [React-url]: https://reactjs.org/
 [Vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [Vercel-url]: https://vercel.com/home
-[Prettier]: https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E
-[Prettier-url]: https://prettier.io/
 [HTML]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [CSS]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
 [Nextjs]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Threejs]: https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white
 [Tailwind]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
-[ContentLayer]: https://img.shields.io/badge/contentlayer-purple?style=for-the-badge

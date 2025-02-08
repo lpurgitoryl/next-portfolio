@@ -9,7 +9,7 @@ function Resume() {
     >
       <h1 className="text-7xl md:text-9xl">Resume</h1>
       <p className="my-12 text-xl md:w-4/5">
-        If you'd like to know more about me feel free to click below and view my
+        If youd like to know more about me feel free to click below and view my
         resume.
       </p>
 
