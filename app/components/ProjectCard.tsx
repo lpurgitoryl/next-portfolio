@@ -15,7 +15,10 @@ interface repoInfo {
 
 function Icon({ icon }: { icon: string }) {
   return (
-    <span className="hover:scale-110 hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl" title={icon}>
+    <span
+      className="hover:scale-110 hover:shadow-lg px-4 py-4 dark:text-white dark:hover:shadow-white dark:hover:text-accent-500 hover:text-accent-500 rounded-xl"
+      title={icon}
+    >
       <Image
         src={
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/" +
@@ -39,7 +42,7 @@ function WorkInProgress() {
       <div className="absolute inset-0 bg-[linear-gradient(153deg,#f2e427_25%,#000_25%,#000_50%,#f2e427_50%,#f2e427_75%,#000_75%,#000_100%)] bg-[size:176.22px_89.79px] opacity-40 animate-cautionTape"></div>
     </div>
   );
-};
+}
 
 function ProjectCard(props: repoInfo) {
   return (
@@ -47,7 +50,13 @@ function ProjectCard(props: repoInfo) {
       <h1 className="text-xl font-semibold">{props.title}</h1>
       <p className="">{props.description}</p>
       <Link href={props.demo}>
-        <Image src={props.media} alt="demo image" width={500} height={500} />
+        <Image
+          src={props.media}
+          alt="demo image"
+          width={500}
+          height={500}
+          className="w-full"
+        />
       </Link>
       <div className="w-full flex justify-around my-2">
         <Link
@@ -71,7 +80,7 @@ function ProjectCard(props: repoInfo) {
         ))}
       </h2>
       <h3 className="text-gray-500">Updated on {props.date}</h3>
-      { props.isWip ? <WorkInProgress /> : ""}
+      {props.isWip ? <WorkInProgress /> : ""}
     </div>
   );
 }
