@@ -1,8 +1,6 @@
 import ProjectCard from "./ProjectCard";
-
-function Projects() {
-  const projects = [
-    {
+/*
+   {
       title: "Jinchuriki",
       repo: "https://github.com/lpurgitoryl/jinchuriki",
       description:
@@ -12,7 +10,11 @@ function Projects() {
       toolbox: ["tailwindcss", "typescript", "nextjs"],
       date: "12/15/2024",
       isWip: false,
-    },
+    }
+*/
+
+function Projects() {
+  const projects = [
     {
       title: "Syncify",
       repo: "https://github.com/lpurgitoryl/Syncify",
