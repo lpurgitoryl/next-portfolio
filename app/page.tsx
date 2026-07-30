@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import ToolBox from "./components/ToolBox";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
-import GlassNavBar from "./components/GlassNavBar"
+import GlassNavBar from "./components/GlassNavBar";
 export default function Home() {
   return (
     <main className="bg-white dark:bg-black">

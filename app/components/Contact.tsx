@@ -10,7 +10,7 @@ import {
 const user_info = {
   github_username: "lpurgitoryl",
   linkedin: "https://www.linkedin.com/in/nicoleb-garcia/",
-  email: "ngarcia201@gmail.com"
+  email: "ngarcia201@gmail.com",
 };
 interface ContactProps {
   children: React.ReactNode;
@@ -40,14 +40,14 @@ function Contact() {
         using any method below!
       </p>
       <p className="mb-12 text-xl">Email: {user_info.email}</p>
-      <Link
+      {/* <Link
         href="/resume.pdf"
         target="_blank"
         className="flex flex-row justify-center items-center cursor-pointer bg-accent-500 py-4 px-6 rounded-full transition-transform duration-200 hover:scale-105"
       >
         <DownloadIcon height={32} width={32} color="white" />
         <p className="text-xl text-white">View Resume</p>
-      </Link>
+      </Link> */}
       <div className="flex my-14">
         <div className="border-r-2 border-black dark:border-white">
           <div className="flex flex-col justify-between items-center h-full mx-4">
