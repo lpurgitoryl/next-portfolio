@@ -1,20 +1,39 @@
 import ProjectCard from "./ProjectCard";
 /*
-   {
-      title: "Jinchuriki",
-      repo: "https://github.com/lpurgitoryl/jinchuriki",
-      description:
-        "A (cool) project that lets you see every character in Naruto with their character info!",
-      demo: "https://jinchuriki.vercel.app/",
-      media: "/jinchuriki.png",
-      toolbox: ["tailwindcss", "typescript", "nextjs"],
-      date: "12/15/2024",
-      isWip: false,
-    }
+   toolbox: use devicon icons from https://devicon.dev/ 
+    the "-orginal" suffix is added in the Icon component
 */
 
 function Projects() {
   const projects = [
+    {
+      title: "BTGlow",
+      repo: "https://github.com/lpurgitoryl/BTGlow",
+      description:
+        "BTGlow is a desktop application for discovering, connecting to, and controlling supported Bluetooth LED lights.",
+      demo: "https://github.com/lpurgitoryl/BTGlow/releases/tag/v1.0.0",
+      media: "/BTGlow.png",
+      toolbox: [
+        "tauri",
+        "rust",
+        "typescript",
+        "react",
+        "tailwindcss",
+        "vitejs",
+      ],
+      date: "7/28/2026",
+      isWip: false,
+    },
+    {
+      title: "curl_smile",
+      repo: "https://github.com/lpurgitoryl/curl_smile",
+      description: "Rust API for Keepsmile Bluetooth lights. Used in BTGlow.",
+      demo: "https://crates.io/crates/curl_smile",
+      media: "/CurlSmile.png",
+      toolbox: ["rust"],
+      date: "7/06/2026",
+      isWip: false,
+    },
     {
       title: "Syncify",
       repo: "https://github.com/lpurgitoryl/Syncify",

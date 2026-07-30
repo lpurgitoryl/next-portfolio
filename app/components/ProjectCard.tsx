@@ -50,13 +50,15 @@ function ProjectCard(props: repoInfo) {
       <h1 className="text-xl font-semibold">{props.title}</h1>
       <p className="">{props.description}</p>
       <Link href={props.demo}>
-        <Image
-          src={props.media}
-          alt="demo image"
-          width={500}
-          height={500}
-          className="w-full"
-        />
+        {props.media && (
+          <Image
+            src={props.media}
+            alt="demo image"
+            width={500}
+            height={500}
+            className="w-full"
+          />
+        )}
       </Link>
       <div className="w-full flex justify-around my-2">
         <Link
